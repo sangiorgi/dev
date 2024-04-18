@@ -14,7 +14,7 @@ const options = {
     ca: fs.readFileSync(path.join(__dirname, 'cert', 'ca_sanmodas_com_br.crt'))
 };
 
-let portHTTPS = 3443;
+let portHTTPS = process.env.PORT || 3443;
 let rorders = require('./routes/orders');
 let rshipments = require('./routes/shipments');
 let {ritems} = require('./routes/items');

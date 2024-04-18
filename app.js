@@ -15,7 +15,6 @@ const options = {
 };
 
 let portHTTPS = process.env.PORT || 3443;
-let host = '0.0.0.0';
 let rorders = require('./routes/orders');
 let rshipments = require('./routes/shipments');
 let {ritems} = require('./routes/items');
@@ -72,7 +71,8 @@ app.use('/api/v1/renew_ml', authenticateToken, renewml);
 app.use('/api/v1/messages', mess);
 
 
-const server = https.createServer(options, app).listen(portHTTPS, host, () =>{
+const server = https.createServer(options, app).listen(portHTTPS, () => {
+  HOST: 0.0.0.0
   console.clear();
   console.info('server escutando na porta ' + portHTTPS + "!");
 });

@@ -14,7 +14,7 @@ const options = {
     ca: fs.readFileSync(path.join(__dirname, 'cert', 'ca_sanmodas_com_br.crt'))
 };
 
-let portHTTPS = process.env.PORT || 3443;
+let portHTTPS = process.env.PORT || 443;
 let rorders = require('./routes/orders');
 let rshipments = require('./routes/shipments');
 let {ritems} = require('./routes/items');
@@ -71,8 +71,7 @@ app.use('/api/v1/renew_ml', authenticateToken, renewml);
 app.use('/api/v1/messages', mess);
 
 
-const server = https.createServer(options, app).listen(portHTTPS, () => {
-  HOST: 0.0.0.0
+const server = https.createServer(options, app).listen(portHTTPS, () => {  
   console.clear();
   console.info('server escutando na porta ' + portHTTPS + "!");
 });

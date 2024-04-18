@@ -1,0 +1,17 @@
+POST https://sanmarket.com.br:3443/api/v0/ext?user=asangiorgi@gmail.com     
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXNhbmdpb3JnaUBnbWFpbC5jb20iLCJpYXQiOjE2NjM0MDA1ODJ9.GEkALAqco7i9-wPM-q2KiloOkQM_TwAvz-UMN_IdQis"
+}
+
+###
+
+POST https://sanmarket.com.br:3443/api/v0/ext?user=asangiorgi@gmail.com     
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXNhbmdpb3JnaUBnbWFpbC5jb20iLCJpYXQiOjE2NjM0MDA1ODJ9.GEkALAqco7i9-wPM-q2KiloOkQM_TwAvz-UMN_IdQis"
+}
+
+###

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">  
+  <link rel="stylesheet" type="text/css" href="public/styles/login.css" />
+  <title>SANTI Application</title>
+</head>
+<body>   
+  <div class='box-login'>
+    <%if (err) { %>
+      <div class="erro-box"><i class="fa fa-times"></i> Usuário ou senha incorretos!</div>
+      <% } %>
+    <h2>Dados para acesso</h2>
+    <form action="/login" method="post">
+      <input type="text" name="user" placeholder="Usuário..." required>
+      <input type="password" name="password" id="password" placeholder="Senha..." required>
+      <div class="form-group-login left">
+        <input type="submit" name="acao" value="Entrar">
+      </div>      
+      <div class="clear"></div>
+    </form>
+  </div>
+</html>

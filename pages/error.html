@@ -1,0 +1,25 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="../public/styles/error.css" />  
+    <script src="https://kit.fontawesome.com/4b9ba14b0f.js"></script>  
+</head>
+<body>
+    <script>
+        window.history.pushState("", "", '/error');
+        </script>
+    <div class="mainbox">
+        <div class='w404'>
+            <div class="err">4</div>
+            <div class='question'>
+                <i class="far fa-question-circle fa-spin"></i>
+            </div>    
+            <div class="err2">4</div>
+        </div>
+        <div class="msg">Talvez essa página mudou de lugar? Foi excluida? Esta oculta pela quarentena? Nunca existiu?
+            <p>Vamos para a <a href="/">Página inicial</a> tentar de lá.</p>
+        </div>            
+    </div>
+    <div class='msg_err'>
+        <h5 style= 'color:red;'>Mensagem: <%= erro %></h5>
+    </div>   
+</body>

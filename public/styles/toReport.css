@@ -1,0 +1,614 @@
+﻿/*Uso exclusivo para relatórios*/
+
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
+body {
+    font-family:Calibri;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.pre-sign {
+    text-align:center;   
+}
+
+.sp-sign {
+    width: 150px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    margin-right: 18px;
+}
+
+
+/*Uso geral bootstrap linhas iniciais escondidas*/
+.bs-checkbox, .tfoot, .fixed-table-toolbar, .fixed-table-loading, .detail-icon {
+    display: none;
+}
+
+/*-------------------------------*/
+/*div and table_info*/
+
+/*auxiliares table_info*/
+.div_list_table {
+    font-size: 12px;
+    background: white;
+    border: solid 1px #ccc;
+    padding: 10px;
+}
+
+.div_list_table table{
+    font-size: 12px;
+}
+
+.div_list_table img {
+    border: 1px groove rgb(245, 245, 245);
+    border-image: none;
+    width: 62px;
+    height: 62px;
+    margin-right: 5px;
+}
+
+.div_list_table pre {
+    font-size: 12px;
+    text-align: center;
+}
+   
+.div-print_table_info {
+    overflow: auto;    
+    font-size: 12px;
+    background: white;
+    border: solid 1px #ccc;
+}
+
+.div-print_table_info pre{
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.div-print_table_info table{
+    font-size: 12px;
+}
+
+/*uso em doReportQuestions*/
+.div-all_article {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.div-question_date {
+    color: red;
+    width: 220px;
+    float: right;
+    text-align: right;
+}
+
+.question_articles {
+    border: solid 1px silver;
+    border-radius: 4px;
+}
+
+.question_question, .question_answer{
+    font-size: 14px;
+    display: flex;
+}
+
+/*uso em doReportFlex*/
+#divListFlex {
+    font-size: 12px;
+}
+
+.preListFlex {
+    font-size: 12px;
+    text-align: center;
+}
+
+#iFlexOk {
+    color: green;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+#iNoFlex {
+    color: red;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+
+#imgAllFlex {
+    border: 1px groove rgb(245, 245, 245);
+    border-image: none;
+    width: 62px;
+    height: 62px;
+}
+
+/*Uso em doReportFiscalData*/
+.tbInfoFiscal, .tbAuxFiscal {
+    font-family: Calibri;
+    font-size: 13px;
+}
+
+.preListFiscalData {
+    text-align: center;
+    font-size: 12px;
+    font-family: Calibri;
+}
+
+/*doReportClaims*/
+.preListClaims {
+    text-align: center;
+    font-size: 12px;
+    font-family: Calibri;
+}
+
+/*uso em doInfo*/
+.pre-list-itens {
+    text-align:center;
+    font-size: 12px;
+}
+
+#tbInfo{
+    font-size: 12px;
+}
+
+
+#imgThumb {
+    width: 30px;
+    height: 20px;
+}
+
+/*uso em doReportAllOrders*/
+
+#pNumberResumeOrder {
+    display: flex !important;
+    margin: 0px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333 !important;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: none !important;
+    font-weight: bold;
+    overflow: hidden;
+    width: 128px;
+    padding: 1px 0 0 0;
+}
+
+.divNotesOrdersRow {    
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pDateNote, .pTextNote {
+    color: blue !important;
+    font-size: 12px;
+    width: 750px;
+    margin: 0 0 0px !important
+}
+
+#pNumberOrderAll {
+    padding: 0px;   
+    height: 20px;
+    border: none !important;
+    background: none !important;
+}
+
+#pNoteOrderAll {
+    border: none !important;
+    background: none !important;
+    font-size: 14px;
+    height: 20px;
+    padding: 0px;
+    width: 40px;
+    font-weight: bold;
+}
+
+#bStatusBuyer {
+    color: #2fac66;
+    font-size: 11px;
+}
+
+#iSkuOk {
+    color: green;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+#iSkuAttention {
+    color: orange;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+#iSkuNoSku {
+    color: red;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+#iEmpty {
+    color: gray;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.btn-show-fiscal_data{
+    border: none;
+    background-color: #f9f9f9;
+}
+
+#tbInfoOrdersAll, #tbInfoPackOrders {
+    font-family: Calibri;
+    font-size: 11px;
+}
+
+#divCliResume {
+    height: 1000px;
+    overflow: auto;
+}
+
+/*btnResume---------------------------------------------------------------------*/
+#txtInfoResumeAll {
+    display: block;
+    padding-top: 10px;
+    font-family: calibri;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    width: 965px;
+    margin: 0px 4px 7px;
+}
+
+.table-borderless td, .table-borderless th {
+    border: 0 !important;
+}
+
+#divToPrintResume {
+    height: 1000px;
+    overflow: auto;
+}
+
+#tbResumeAllOrders {
+    font-family: calibri;
+    font-size: 12px;
+    border: 0 !important;
+}
+
+#accountRowName {
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 9.5px;
+    background-color: #f5f5f5 !important;
+}
+
+#rowResumeDataSizes {    
+    display: flex;    
+    margin-bottom: 5px;
+    max-height: 130px;
+}
+
+#detailsAllOrders {
+    list-style-type: none;
+    padding: 0px;
+    width: 800px;
+    position:relative;
+    top: -3px;
+}
+
+#detailsAllSizes {
+    flex-grow: 1;
+    line-height: 1.02;
+}
+
+#divQtdResume {
+    height: 62px;
+    width: 70px;
+    display: flex;
+    background-color: gray;
+    justify-content: space-around;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+#spQtdResume {
+    font-size: 38px;
+    color: white;
+}
+
+#divFotoResume {
+    width: 62px;
+    margin-right: 10px;
+}
+
+#divQtdOrdersRow {
+    border: 1px solid black;
+    margin-right: 4px;
+    width: 62px;
+    height: 62px;
+    border-radius: 20px;
+    font-size: 30px;
+    line-height: 61px;
+    text-align: center;
+    background: #e6f5ff;
+}
+
+#imgAllOrders {
+    border: 1px solid black;
+    border-image: none;
+    width: 62px;
+    height: 62px;
+    margin-right: 6px;
+    border-radius: 5px;
+}
+
+#divItemResume {
+    width: 470px;
+}
+
+#divSizeResume {
+    width: 350px;
+}
+
+/*Uso em doReportInvoicesResume*/
+#preInvoicesResume {
+    text-align: center;
+}
+
+#bTitleFiles {
+    color: red;
+    font-size: 13px;
+}
+
+#txtNfeInvoicesResume {
+    line-height: 12px;
+    border: currentColor;
+    border-image: none;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+}
+
+/*Uso em doReportHistorical*/
+#tbInfoHistorical {
+    font-family: Calibri;
+    font-size: 13px;
+}
+
+#txtTitleHistoricalClone{
+    text-align: center;
+    font-size: 12px;
+}
+
+#imgHistorical {
+    width: 55px;
+    height: 55px;
+    border: solid 1px silver;
+    margin-right: 5px;
+}
+
+#ulHistorical {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*uso em doshipments*/
+#txtTitle {
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#divAllShips {
+    font-family: calibri;
+    position: absolute;
+    width: 982px;
+}
+
+
+#lineSail {
+    border: solid 1px #b3b3b3;
+    padding-top: 1px;
+}
+
+#divLineBuyer {
+    display: flex;
+    padding-left: 2px;
+    background: #e6f5ff !important;
+    font-size: 11px;    
+    height: 60px;
+    padding-top: 1px;
+}
+
+#divBuyer {
+    width: 790px;
+    padding-bottom: 10px;
+}
+
+#divShip {
+    font-size: 11px;
+}
+
+#divLineDets {
+    padding-left: 2px;    
+    height: 72px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#divDets {
+    padding-top: 10px;
+    padding-left: 20px;
+    height: 75px;
+    line-height: 14px;
+    display: flex;
+}
+
+#divQtd {
+    border: 1px solid black;
+    margin-right: 4px;
+    width: 70px;
+    height: 65px;
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: #e6f5ff;
+    line-height: 61px;
+    text-align: center;
+}
+
+#imgDets {
+    float: left;
+    margin-right: 3px;
+    height: 65px;
+    width: 65px;
+    max-height: 65px;
+    max-width: 65px;
+}
+
+#divLineObs {
+    height: 19px;
+    display: flex;
+}
+
+
+#txtNote {
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 12px;
+    padding: 3px 2px !important;
+    color: #0099ff !important;
+}
+
+button[name='btnAdd'] {
+    display: none;
+}
+
+/*use emGetColors*/
+.preListColors {
+    text-align: center;
+}
+
+#circleColor {
+    border-radius: 50%;
+}
+
+/*Uso em doReportSearchOrders*/
+#tbInfoOthersSails {
+    font-family: Calibri;
+    font-size: 12px;
+}
+
+/*Uso em doReportFiscalData*/
+#ulAuxAllitensFiscal, #ulAuxAllitensSKUFiscal {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.info-statusFiscal {
+    display:none; 
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 10pt;
+}
+
+#info-valueStatus {
+    display: none;
+    font-size: 14px;
+    margin-bottom: 4px;
+    margin-top: 3px;
+    color: #0099ff;
+    text-align: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*uso em doReportSearchOrdersGeneral*/
+#txtTitleAllOrdersClone {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.badgeClaim, .badgeClaim .tooltiptext {
+    display: none;
+}
+
+.btn-show_inventory_data {
+    border: none;
+    background-color: transparent;
+}
+
+/*uso em new report resume*/
+#tb-resume>tbody>tr>td {
+    padding: 0px !important;
+}
+
+#div-print_resume {
+    height: 1000px;
+    overflow: auto;
+}
+
+#tb-resume {
+    font-family: calibri;
+    font-size: 12px;
+    border: 0 !important;
+}
+
+#div-qtd_resume {
+    height: 62px;
+    width: 70px;
+    display: flex;
+    background-color: gray;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+#sp-qtd_resume {
+    font-size: 38px;
+    color: white;
+}
+
+#div-foto_resume {
+    width: 62px;    
+}
+
+#img-foto_resume {
+    border: 1px solid black;
+    border-image: none;
+    width: 62px;
+    height: 62px;
+    margin-right: 6px;
+    border-radius: 5px;
+}
+
+#div-item_resume {
+    width: 360px;
+}
+
+#list-item_resume {
+    position:relative;
+    top: -3px;
+    list-style-type: none;
+    padding: 0px;    
+    
+}
+
+#div-size_resume {
+    width: 380px;
+}
+
+
+#list-size_resume {
+    position:relative;
+    top: -3px;
+    padding-top: 0;
+}

@@ -1,0 +1,33 @@
+
+<%- include('partials/header.html') %>
+<script>
+    window.history.pushState("", "", '/auth-ml');
+</script>
+<div class="row">
+<div class="col">       
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"><%= userData.first_name + ' ' + userData.last_name%></h4>
+            <h5 class="card-subtitle mb-2 text-muted col-5">Conta <%= userData.id%></h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>E-mail: </b> <%= userData.email%></li>
+                <li class="list-group-item"><b>Endereço: </b><br><%= userData.address.address%><br> 
+                        <%= userData.address.city%> <br> 
+                        <%= userData.address.state%><br>
+                        <%= userData.address.zip_code%><br></li>
+                <li class="list-group-item"><b>Fone:</b> <%= '(' + userData.phone.area_code + ') ' + userData.phone.number%></li>
+                <li class="list-group-item"><b>Access Token:</b> <%= token%></li>
+                <li class="list-group-item"><b>Refresh Token:</b> <%= refresh%></li>
+                <li class="list-group-item"><b>Expira em:</b> <%= expires%></li>
+            </ul>
+            <div style="padding: 10px;">
+                <a href="<%= userData.permalink%>" target="_blank" class="card-link">Mais detalhes</a>
+            </div>
+        </div>
+    </div>  
+</div>
+</div>
+
+<%- include('partials/footer.html') %>
+</body>
+</html>

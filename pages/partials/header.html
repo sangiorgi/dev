@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>   
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/public/styles/bootstrap-table.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/public/styles/bootstrap.min.css" media="screen" /
+    <link rel="stylesheet" type="text/css" href="/public/styles/font-awesome.min.css">    
+    <link rel="stylesheet" type="text/css" href="/public/styles/ml.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/public/styles/modals.css" media="screen" /> 
+    <link rel="stylesheet" type="text/css" href="/public/styles/jquery-confirm.min.css"/>  
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="/public/scripts/lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/public/scripts/lib/kit-fontawesome.js"></script>
+    <script type="text/javascript" src="/public/scripts/lib/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="/public/scripts/lib/datatables.min.js"></script>              
+    <script type="text/javascript" src="/public/scripts/lib/popper.min.js"></script>
+    <script type="text/javascript" src="/public/scripts/lib/aux-main.js"></script>
+    <script type="text/javascript" src="/public/scripts/app/home.js"></script>
+    <script type="text/javascript" src="/public/scripts/app/main.js"></script>           
+    <script type="text/javascript" src="public/scripts/lib/jszip.js"></script>   
+    <script type="text/javascript" src="/public/scripts/lib/bluebird-3.3.4.min.js"></script>    
+    <script type="text/javascript" src="/public/scripts/lib/jquery-confirm.min.js"></script> 
+    <script type="text/javascript" src="/public/scripts/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="/public/scripts/lib/jquery.ui.datepicker-pt.br.js"></script>
+    <script type="text/javascript" src="/public/scripts/lib/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="/public/scripts/lib/bootstrap-table-locale-pt-BR.min.js"></script> 
+    <script type="text/javascript" src="/public/scripts/lib/tableToExcel.js"></script>  
+    <script type="text/javascript" src="/public/scripts/lib/aes.js"></script>
+    <title>Gestão Mercado Livre</title>
+</head>
+<body>         
+    <div class="menu">
+        <div class="menu-wraper">  
+            <div class="menu-user">
+                <h5>Olá Visitante</h5>
+            </div>      
+            <div class="items-menu">
+                <h2>Administração</h2>
+                <a href="#"  onclick='getAdminActions();'>Gestão</a>                   
+                <ul class="nav nav-menu_left">
+                    <li class="dropdown">                
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ações
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick='getQuestions();'>Perguntas</a></li>
+                            <li><a href="#" onclick='getBlackList();'>Lista Negra</a></li>
+                            <li><a href="#" onclick='getPhotos();'>Fotos</a></li>
+                            <li><a href="#" onclick='getItemML();'>Ver e Copiar Anúncio</a></li>
+                        </ul>
+                    </li> 
+                </ul>
+                <ul class="nav nav-menu_left">
+                    <li class="dropdown">                
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Relatórios
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">                            
+                            <li><a href="#" onclick='getSearchOrders();' >Consultar Pedidos</a></li>
+                            <li><a href="#" onclick='getLabels();'>Etiquetas</a></li>
+                            <li><a href="#" onclick='getFiscalData();'>Dados Fiscais</a></li>
+                            <li><a href="#" onclick='getFull();'>Vendas Full</a></li>
+                            <li><a href="#" onclick='getFlex();'>Gestão Flex</a></li>
+                            <li><a href="#" onclick='getClaims();'>Reclamações</a></li>                            
+                        </ul>
+                    </li> 
+                </ul>
+                <ul class="nav nav-menu_left">
+                    <li class="dropdown">                
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Vendas
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick='getOrdersAllPending();'>Pedidos a enviar</a></li>
+                            <li><a href="#" onclick='getOrdersAllShipped(); return false;'>Pedidos despachados</a></li>
+                            <li><a href="#" onclick='getOrdersQuickly(); return false;'>Relatório rápido</a></li>
+                    </li> 
+                </ul>
+            </div><!--items-menu-->
+        </div><!--menu-wraper-->
+    </div><!--menu-->
+    
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Olá Visitante</a>
+          </div>
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div><!--menu-btn-->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">                
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span> Utilitários
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"  onclick='getTableNCMs();'>Tabela NCM</a></li>
+                    <li><a href="#" onclick='getChart();'>Detalhar Carrinho</a></li>
+                    <li><a href="#" onclick='getTests();'>Uso futuro</a></li>
+                </ul>
+            </li> 
+            <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="./login"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
+        </ul>
+        </div>
+      </nav>
+
+    <div class='content w100'>
